@@ -148,6 +148,11 @@ int main(int argc, char* argv[]) {
             }
             i--;
         }
+        else if (arg == "--help" or true){
+            char help[] = "Options:\n\t-w\t\twindow width\n\t-h\t\twindow height\n\t-t\t\titeration time (ms)\n\t-i\t\tnumber of iterations\n\t-p\t\tfilling density [0..1]\n\t-l\t\tConway's Game of Life cellular automaton with B3/S23 rule (-b 3 -s 2 3)\n\t-d\t\tDay and Night cellular automaton with B3678/S34678 rule (-b 3 6 7 8 -s 3 4 6 7 8)\n\t-b [NUM]\tdead cell becomes live (is born) if it has [NUM] live neighbors\n\t-s [NUM]\ta live cell remains alive (survives) if it has [NUM] live neighbors\n";
+            printf("%s", help);
+            return 0;
+        }
     }
 
     if (game == 0){
